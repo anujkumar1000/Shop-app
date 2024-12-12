@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronsUpDown, Check } from "lucide-react";
+import { ChevronsUpDown, Check ,X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -45,7 +45,13 @@ export function CategorySelectorComponent({
           {value
             ? categories.find((category) => category._id === value)?.title
             : "Filter by Category"}
-          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0" />
+          {/* <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0" /> */}
+          {/* Conditional rendering of the icon */}
+          {open ? (
+            <X className="ml-2 h-4 w-4 shrink-0 cursor-pointer" /> // "Close" icon when open
+          ) : (
+            <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0" /> // Default icon when closed
+          )}
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-full p-0">
