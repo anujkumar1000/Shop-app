@@ -58,9 +58,11 @@ function Header() {
           >
             <TrolleyIcon className="w-6 h-6" />
             {/* span item count once global state is implemented */}
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
-              {itemCount}
-            </span>
+            {itemCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                {itemCount}
+              </span>
+            )}
             <span>My Basket</span>
           </Link>
           {/* user area */}
