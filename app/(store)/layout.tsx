@@ -33,6 +33,175 @@ export default async function RootLayout({
             <Header />
             {children}
           </main>
+
+          {/* <footer className="bg-gray-800 text-white py-8">
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    
+      <div>
+        <h4 className="text-xl font-semibold mb-4">Shopr</h4>
+        <p className="text-sm">Your go-to place for the best products at unbeatable prices!</p>
+      </div>
+
+    
+      <div>
+        <h4 className="text-xl font-semibold mb-4">Customer Support</h4>
+        <ul className="space-y-2">
+          <li><a href="/contact" className="hover:text-orange-400">Contact Us</a></li>
+          <li><a href="/shipping" className="hover:text-orange-400">Shipping Information</a></li>
+          <li><a href="/returns" className="hover:text-orange-400">Returns & Exchanges</a></li>
+          <li><a href="/faq" className="hover:text-orange-400">FAQs</a></li>
+        </ul>
+      </div>
+
+      
+      <div>
+        <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
+        <ul className="space-y-2">
+          <li><a href="/" className="hover:text-orange-400">Home</a></li>
+          <li><a href="/shop" className="hover:text-orange-400">Shop</a></li>
+          <li><a href="/about" className="hover:text-orange-400">About Us</a></li>
+          <li><a href="/blog" className="hover:text-orange-400">Blog</a></li>
+        </ul>
+      </div>
+
+    
+      <div>
+        <h4 className="text-xl font-semibold mb-4">Follow Us</h4>
+        <div className="flex space-x-6">
+          <a href="https://www.facebook.com" className="hover:text-orange-400" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-facebook-f text-2xl"></i>
+          </a>
+          <a href="https://www.instagram.com" className="hover:text-orange-400" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-instagram text-2xl"></i>
+          </a>
+          <a href="https://twitter.com" className="hover:text-orange-400" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-twitter text-2xl"></i>
+          </a>
+          <a href="https://www.linkedin.com" className="hover:text-orange-400" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-linkedin text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+   
+    <div className="mt-8 border-t border-gray-700 pt-4 text-center text-sm">
+      <p>&copy; {new Date().getFullYear()} Shopr. All rights reserved.</p>
+    </div>
+  </div>
+</footer> */}
+
+          <footer className="bg-gray-800 text-white py-8">
+            <div className="container mx-auto px-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                {/* Company Info Section */}
+                <div>
+                  <h4 className="text-xl font-semibold mb-4">Shopr</h4>
+                  <p className="text-sm">
+                    Your go-to place for the best products at unbeatable prices!
+                  </p>
+                </div>
+
+                {/* Customer Support Section */}
+                <div>
+                  <h4 className="text-xl font-semibold mb-4">
+                    Customer Support
+                  </h4>
+                  <ul className="space-y-2">
+                    <li>
+                      <span className="hover:text-orange-400 cursor-pointer">
+                        Contact Us
+                      </span>
+                    </li>
+                    <li>
+                      <span className="hover:text-orange-400 cursor-pointer">
+                        Shipping Information
+                      </span>
+                    </li>
+                    <li>
+                      <span className="hover:text-orange-400 cursor-pointer">
+                        Returns & Exchanges
+                      </span>
+                    </li>
+                    <li>
+                      <span className="hover:text-orange-400 cursor-pointer">
+                        FAQs
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Quick Links Section */}
+                <div>
+                  <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
+                  <ul className="space-y-2">
+                    <li>
+                      <span className="hover:text-orange-400 cursor-pointer">
+                        Home
+                      </span>
+                    </li>
+                    <li>
+                      <span className="hover:text-orange-400 cursor-pointer">
+                        Shop
+                      </span>
+                    </li>
+                    <li>
+                      <span className="hover:text-orange-400 cursor-pointer">
+                        About Us
+                      </span>
+                    </li>
+                    <li>
+                      <span className="hover:text-orange-400 cursor-pointer">
+                        Blog
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Social Media Section */}
+                <div>
+                  <h4 className="text-xl font-semibold mb-4">Follow Us</h4>
+                  <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+                    {/* Facebook */}
+                    <span className="social-icon hover:bg-blue-600 hover:text-white cursor-pointer flex items-center space-x-2 px-4 py-2 rounded-lg transition ease-in-out duration-300">
+                      <i className="fab fa-facebook-f text-2xl"></i>
+                      <span className="text-sm sm:block">Facebook</span>
+                    </span>
+
+                    {/* Instagram */}
+                    <span className="social-icon hover:bg-pink-600 hover:text-white cursor-pointer flex items-center space-x-2 px-4 py-2 rounded-lg transition ease-in-out duration-300">
+                      <i className="fab fa-instagram text-2xl"></i>
+                      <span className="text-sm sm:block">Instagram</span>
+                    </span>
+
+                    {/* Twitter */}
+                    <span className="social-icon hover:bg-blue-400 hover:text-white cursor-pointer flex items-center space-x-2 px-4 py-2 rounded-lg transition ease-in-out duration-300">
+                      <i className="fab fa-twitter text-2xl"></i>
+                      <span className="text-sm sm:block">Twitter</span>
+                    </span>
+
+                    {/* LinkedIn */}
+                    <span className="social-icon hover:bg-blue-700 hover:text-white cursor-pointer flex items-center space-x-2 px-4 py-2 rounded-lg transition ease-in-out duration-300">
+                      <i className="fab fa-linkedin text-2xl"></i>
+                      <span className="text-sm sm:block">LinkedIn</span>
+                    </span>
+                  </div>
+                  <p className="text-center text-sm mt-4 text-gray-400">
+                    Connect with us for the latest updates and exclusive offers!
+                  </p>
+                </div>
+              </div>
+
+              {/* Bottom Copyright */}
+              <div className="mt-8 border-t border-gray-700 pt-4 text-center text-sm">
+                <p>
+                  &copy; {new Date().getFullYear()} Shopr. All rights reserved.
+                </p>
+              </div>
+            </div>
+          </footer>
+
           <SanityLive />
         </body>
       </html>
