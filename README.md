@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+Live Link-  https://shop-app-virid-eta.vercel.app/
+
+>>>>>>> 01d4e985e29ee0d1e7f580ef487abbe86695a443
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
