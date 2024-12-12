@@ -82,30 +82,28 @@ function Header() {
                 <span>My Orders</span>
               </Link>
               {user?.passkeys.length === 0 && (
-              <button
-                onClick={createClerkPasskey}
-                className="bg-white  hover:bg-blue-700 hover:text-white
+                <button
+                  onClick={createClerkPasskey}
+                  className="bg-white  hover:bg-blue-700 hover:text-white
                animate-pulse text-blue-500 font-bold py-2 px-4 rounded
              border-blue-300 border"
-              >
-                Create Passkey
-              </button>
-            )}
-            
+                >
+                  Create Passkey
+                </button>
+              )}
             </SignedIn>
 
-            {
-              user ? (
-                <div className="flex items-center space-x-2">
-                  <UserButton />
-                  <div className="hidden sm:block text-xs">
-                    <p className="text-gray-400">Welcome Back</p>
-                    <p className="font-bold">{user.fullName}!</p>
-                  </div>
+            {user ? (
+              <div className="flex items-center space-x-2">
+                <UserButton />
+                <div className="hidden sm:block text-xs">
+                  <p className="text-gray-400">Welcome Back</p>
+                  <p className="font-bold">{user.fullName}!</p>
                 </div>
-              ) : null}
+              </div>
+            ) : null}
 
-              {/* // (
+            {/* // (
               // <SignInButton mode="modal"  />
               // <SignInButton mode="modal">
               //   <div className="relative flex justify-center sm:justify-start items-center space-x-2 bg-blue-100 hover:bg-blue-200 text-blue-800 font-semibold py-2 px-4 rounded-md sm:w-auto w-full max-w-sm cursor-pointer">
@@ -113,19 +111,15 @@ function Header() {
               //   </div>
               // </SignInButton>
               // ) */}
-            
-
-        
-         
           </ClerkLoaded>
-             {/* "Sign In" (or "Sign Up") button at the end */}
-             {!user && (
-              <SignInButton mode="modal">
-                <div className="relative flex justify-center sm:justify-start items-center space-x-2 bg-blue-100 hover:bg-blue-200 text-blue-800 font-semibold py-2 px-4 rounded-md sm:w-auto w-full max-w-sm cursor-pointer">
-                  <span>Sign In</span>
-                </div>
-              </SignInButton>
-            )}
+          {/* "Sign In" (or "Sign Up") button at the end */}
+          {!user && (
+            <SignInButton mode="modal">
+              <div className="relative flex justify-center sm:justify-start items-center space-x-2 bg-blue-100 hover:bg-blue-200 text-blue-800 font-semibold py-2 px-4 rounded-md sm:w-auto w-full max-w-sm cursor-pointer">
+                <span>Sign In</span>
+              </div>
+            </SignInButton>
+          )}
         </div>
       </div>
     </header>

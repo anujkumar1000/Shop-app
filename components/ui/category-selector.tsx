@@ -48,9 +48,9 @@ export function CategorySelectorComponent({
           {/* <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0" /> */}
           {/* Conditional rendering of the icon */}
           {open ? (
-            <ChevronsUp className="ml-2 h-4 w-4 shrink-0 cursor-pointer" /> // Chevron up when open
+            <ChevronsUp className="ml-2 h-4 w-4 shrink-0 cursor-pointer" /> 
           ) : (
-            <ChevronsDown className="ml-2 h-4 w-4 shrink-0" /> // Chevron down when closed
+            <ChevronsDown className="ml-2 h-4 w-4 shrink-0" /> 
           )}
         </Button>
       </PopoverTrigger>
