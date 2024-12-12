@@ -81,28 +81,7 @@ function Header() {
                 <PackageIcon className="w-6 h-6" />
                 <span>My Orders</span>
               </Link>
-            </SignedIn>
-
-            {user ? (
-              <div className="flex items-center space-x-2">
-                <UserButton />
-                <div className="hidden sm:block text-xs">
-                  <p className="text-gray-400">Welcome Back</p>
-                  <p className="font-bold">{user.fullName}!</p>
-                </div>
-              </div>
-            ) : (
-              // <SignInButton mode="modal"  />
-              <SignInButton mode="modal">
-                <div className="relative flex justify-center sm:justify-start items-center space-x-2 bg-blue-100 hover:bg-blue-200 text-blue-800 font-semibold py-2 px-4 rounded-md sm:w-auto w-full max-w-sm cursor-pointer">
-                  <span>Sign In</span>
-                </div>
-              </SignInButton>
-            )}
-
-           
-          </ClerkLoaded>
-          {user?.passkeys.length === 0 && (
+              {user?.passkeys.length === 0 && (
               <button
                 onClick={createClerkPasskey}
                 className="bg-white  hover:bg-blue-700 hover:text-white
@@ -111,6 +90,41 @@ function Header() {
               >
                 Create Passkey
               </button>
+            )}
+            
+            </SignedIn>
+
+            {
+              user ? (
+                <div className="flex items-center space-x-2">
+                  <UserButton />
+                  <div className="hidden sm:block text-xs">
+                    <p className="text-gray-400">Welcome Back</p>
+                    <p className="font-bold">{user.fullName}!</p>
+                  </div>
+                </div>
+              ) : null}
+
+              {/* // (
+              // <SignInButton mode="modal"  />
+              // <SignInButton mode="modal">
+              //   <div className="relative flex justify-center sm:justify-start items-center space-x-2 bg-blue-100 hover:bg-blue-200 text-blue-800 font-semibold py-2 px-4 rounded-md sm:w-auto w-full max-w-sm cursor-pointer">
+              //     <span>Sign In</span>
+              //   </div>
+              // </SignInButton>
+              // ) */}
+            
+
+        
+         
+          </ClerkLoaded>
+             {/* "Sign In" (or "Sign Up") button at the end */}
+             {!user && (
+              <SignInButton mode="modal">
+                <div className="relative flex justify-center sm:justify-start items-center space-x-2 bg-blue-100 hover:bg-blue-200 text-blue-800 font-semibold py-2 px-4 rounded-md sm:w-auto w-full max-w-sm cursor-pointer">
+                  <span>Sign In</span>
+                </div>
+              </SignInButton>
             )}
         </div>
       </div>
