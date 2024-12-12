@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronsUpDown, Check ,X, ChevronsUp, ChevronsDown } from "lucide-react";
+import {  Check , ChevronsUp, ChevronsDown } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
