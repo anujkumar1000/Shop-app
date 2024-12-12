@@ -100,7 +100,9 @@ function Header() {
               </SignInButton>
             )}
 
-            {user?.passkeys.length === 0 && (
+           
+          </ClerkLoaded>
+          {user?.passkeys.length === 0 && (
               <button
                 onClick={createClerkPasskey}
                 className="bg-white  hover:bg-blue-700 hover:text-white
@@ -110,7 +112,6 @@ function Header() {
                 Create Passkey
               </button>
             )}
-          </ClerkLoaded>
         </div>
       </div>
     </header>
