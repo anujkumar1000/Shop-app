@@ -14,9 +14,14 @@ import useBasketStore from "@/store/store";
 
 function Header() {
   const { user } = useUser();
-  const itemCount = useBasketStore((state) =>
-    state.items.reduce((total, item) => total + item.quantity, 0)
-  );
+  // const itemCount = useBasketStore((state) =>
+  //   state.items.reduce((total, item) => total + item.quantity, 0)
+  // );
+  const itemCount = useBasketStore((state) => {
+    const uniqueItems = new Set(state.items.map(item => item.product)); 
+    return uniqueItems.size; // Number of unique items
+  });
+
 
   const createClerkPasskey = async () => {
     try {
